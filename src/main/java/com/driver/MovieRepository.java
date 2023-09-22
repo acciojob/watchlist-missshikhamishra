@@ -1,10 +1,12 @@
 package com.driver;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Repository
+@Service
 public class MovieRepository {
     private HashMap<String,Movie> movieMap;
     private HashMap<String, Director> directorMap;
