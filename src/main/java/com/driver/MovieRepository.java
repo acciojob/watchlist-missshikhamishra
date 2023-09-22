@@ -38,7 +38,7 @@ public class MovieRepository {
     public Director findDirector(String director){
         return directorMap.get(director);
     }
-    public List<String> findMoviesFromDirector(String director){
+    public List<String> findMovieFromDirector(String director){
         List<String> movieList = new ArrayList<String>();
         if(directorMovieMapping.containsKey(director))
             movieList= directorMovieMapping.get(director);
@@ -63,7 +63,7 @@ public class MovieRepository {
             directorMap.remove(director);
         }
     }
-    public void deleteAllDirector(){
+    public void deleteAllDirectors(){
         HashSet<String> movieSet = new HashSet<String>();
         for(String director : directorMovieMapping.keySet()) {
             for (String movie : directorMovieMapping.get(director)) {
